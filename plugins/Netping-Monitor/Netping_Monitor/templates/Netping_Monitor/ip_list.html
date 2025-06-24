@@ -1,0 +1,36 @@
+<h2>NetPing IP Pinger</h2>
+<button onclick="pingAll()">Ping All</button>
+<table>
+  <tr>
+    <th>IP Address</th>
+    <th>Status</th>
+    <th>Action</th>
+  </tr>
+  {% for ip in ip_list %}
+  <tr id="row-{{ ip }}">
+    <td>{{ ip }}</td>
+    <td id="status-{{ ip }}">Idle</td>
+    <td><button onclick="pingIP('{{ ip }}')">Ping</button></td>
+  </tr>
+  {% endfor %}
+</table>
+
+<script>
+async function pingIP(ip) {
+    const response = await fetch('/plugins/netping-monitor/ping-ip/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: `ip=${ip}`
+    });
+    const data = await response.json();
+    document.getElementById(`status-${ip}`).textContent = data.status || "Error";
+}
+
+async function pingAll() {
+    const rows = document.querySelectorAll("tr[id^='row-']");
+    for (let row of rows) {
+        const ip = row.id.replace("row-", "");
+        await pingIP(ip);
+    }
+}
+</script>

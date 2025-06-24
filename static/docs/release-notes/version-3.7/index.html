@@ -1,0 +1,7636 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+  
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.netbox.dev/release-notes/version-3.7/">
+      
+      
+        <link rel="prev" href="../version-4.0/">
+      
+      
+        <link rel="next" href="../version-3.6/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+  
+  
+    <meta name="robots" content="noindex">
+  
+
+    
+      
+        <title>Version 3.7 - NetBox Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#netbox-v37" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="NetBox Documentation" class="md-header__button md-logo" aria-label="NetBox Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NetBox Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Version 3.7
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to Dark Mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to Dark Mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to Light Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/netbox-community/netbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    netbox-community/netbox
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NetBox Documentation" class="md-nav__button md-logo" aria-label="NetBox Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    NetBox Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/netbox-community/netbox" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    netbox-community/netbox
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/facilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Facilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/devices-cabling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Devices & Cabling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/power-tracking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power Tracking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/ipam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPAM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/vlan-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VLAN Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/l2vpn-overlay/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L2VPN & Overlay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/circuits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Circuits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wireless
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/virtualization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Virtualization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/vpn-tunnels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VPN Tunnels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/tenancy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tenancy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/contacts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contacts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/context-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Context Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/configuration-rendering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration Rendering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/synchronized-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synchronized Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/change-logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Change Logging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/journaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Journaling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/event-rules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event Rules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/notifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notifications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/background-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Background Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/authentication-permissions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auth & Permissions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/api-integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API & Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/customization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation & Upgrade
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Installation & Upgrade
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing NetBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/1-postgresql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. PostgreSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/2-redis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Redis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/3-netbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. NetBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/4a-gunicorn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4a. Gunicorn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/4b-uwsgi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4b. uWSGI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/5-http-server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. HTTP Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/6-ldap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. LDAP (Optional)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/upgrading/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrading NetBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/populating-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Populating Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring NetBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/required-parameters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Required Parameters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/graphql-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphQL API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/remote-authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Remote Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/data-validation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data & Validation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/default-values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Default Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/error-reporting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Error Reporting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/miscellaneous/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Miscellaneous
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Customization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Customization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/custom-fields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Fields
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/custom-links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/custom-validation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Validation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/export-templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/custom-scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Integrations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/rest-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/graphql-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphQL API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/webhooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Webhooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/synchronized-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synchronized Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/prometheus-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prometheus Metrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Plugins
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Plugins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing a Plugin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/removal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Removing a Plugin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Developing Plugins
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Developing Plugins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Navigation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/tables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/forms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/filtersets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filters & Filter Sets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/event-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/data-backends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Backends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/rest-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/graphql-api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GraphQL API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/background-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Background Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/dashboard-widgets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dashboard Widgets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/staged-changes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Staged Changes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/exceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/development/migration-v4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migrating to v4.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Administration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Administration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administration/authentication/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administration/authentication/google/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administration/authentication/microsoft-entra-id/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Entra ID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administration/authentication/okta/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Okta
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administration/permissions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Permissions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administration/error-reporting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Error Reporting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administration/housekeeping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Housekeeping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administration/replicating-netbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replicating NetBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administration/netbox-shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NetBox Shell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Data Model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Circuits
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            Circuits
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/circuits/circuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Circuit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/circuits/circuitgroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CircuitGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/circuits/circuitgroupassignment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CircuitGroupAssignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/circuits/circuittermination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Circuit Termination
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/circuits/circuittype/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Circuit Type
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/circuits/provider/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Provider
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/circuits/provideraccount/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Provider Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/circuits/providernetwork/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Provider Network
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Core
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Core
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/core/datafile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataFile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/core/datasource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/core/job/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DCIM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            DCIM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/cable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/consoleport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ConsolePort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/consoleporttemplate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ConsolePortTemplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/consoleserverport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ConsoleServerPort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/consoleserverporttemplate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ConsoleServerPortTemplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/device/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Device
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/devicebay/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DeviceBay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/devicebaytemplate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DeviceBayTemplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/devicerole/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DeviceRole
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/devicetype/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DeviceType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/frontport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FrontPort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/frontporttemplate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FrontPortTemplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/interfacetemplate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    InterfaceTemplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/inventoryitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    InventoryItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/inventoryitemrole/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    InventoryItemRole
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/inventoryitemtemplate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    InventoryItemTemplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/location/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Location
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/manufacturer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manufacturer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/module/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/modulebay/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ModuleBay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/modulebaytemplate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ModuleBayTemplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/moduletype/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ModuleType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/platform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/powerfeed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PowerFeed
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/poweroutlet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PowerOutlet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/poweroutlettemplate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PowerOutletTemplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/powerpanel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PowerPanel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/powerport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PowerPort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/powerporttemplate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PowerPortTemplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/rack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/rackreservation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RackReservation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/rackrole/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RackRole
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/racktype/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RackType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/rearport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RearPort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/rearporttemplate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RearPortTemplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/region/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Region
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/sitegroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SiteGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/virtualchassis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualChassis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/dcim/virtualdevicecontext/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualDeviceContext
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_4" id="__nav_10_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Extras
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_4">
+            <span class="md-nav__icon md-icon"></span>
+            Extras
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/bookmark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bookmark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/branch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Branch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/configcontext/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ConfigContext
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/configtemplate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ConfigTemplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/customfield/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CustomField
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/customfieldchoiceset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CustomFieldChoiceSet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/customlink/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CustomLink
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/eventrule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EventRule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/exporttemplate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ExportTemplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/imageattachment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ImageAttachment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/journalentry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JournalEntry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/notification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/notificationgroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NotificationGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/savedfilter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SavedFilter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/stagedchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StagedChange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/subscription/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Subscription
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/tag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/extras/webhook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Webhook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_5" id="__nav_10_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IPAM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5">
+            <span class="md-nav__icon md-icon"></span>
+            IPAM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/asn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ASN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/asnrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ASNRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/aggregate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aggregate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/fhrpgroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FHRPGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/fhrpgroupassignment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FHRPGroupAssignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/ipaddress/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPAddress
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/iprange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/prefix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prefix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/rir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RIR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/role/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Role
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/routetarget/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RouteTarget
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/service/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Service
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/servicetemplate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ServiceTemplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/vlan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VLAN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/vlangroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VLANGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/ipam/vrf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VRF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_6" id="__nav_10_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tenancy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tenancy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/tenancy/contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/tenancy/contactgroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ContactGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/tenancy/contactrole/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ContactRole
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/tenancy/tenant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tenant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/tenancy/tenantgroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TenantGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_7" id="__nav_10_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Virtualization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_7">
+            <span class="md-nav__icon md-icon"></span>
+            Virtualization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/virtualization/cluster/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cluster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/virtualization/clustergroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ClusterGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/virtualization/clustertype/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ClusterType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/virtualization/vminterface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VMInterface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/virtualization/virtualdisk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualDisk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/virtualization/virtualmachine/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VirtualMachine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_8" id="__nav_10_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VPN
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_8">
+            <span class="md-nav__icon md-icon"></span>
+            VPN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/vpn/ikepolicy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IKEPolicy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/vpn/ikeproposal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IKEProposal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/vpn/ipsecpolicy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPSecPolicy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/vpn/ipsecprofile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPSecProfile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/vpn/ipsecproposal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IPSecProposal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/vpn/l2vpn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L2VPN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/vpn/l2vpntermination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L2VPNTermination
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/vpn/tunnel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tunnel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/vpn/tunnelgroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TunnelGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/vpn/tunneltermination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TunnelTermination
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_9" id="__nav_10_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Wireless
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_9">
+            <span class="md-nav__icon md-icon"></span>
+            Wireless
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/wireless/wirelesslan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WirelessLAN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/wireless/wirelesslangroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WirelessLANGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/wireless/wirelesslink/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WirelessLink
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/filtering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filtering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/conditions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conditions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/style-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Style Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/adding-models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/extending-models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extending Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/signals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Signals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/application-registry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Application Registry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/user-preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Preferences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/web-ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/internationalization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/translations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Translations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/release-checklist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Checklist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/git-cheat-sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git Cheat Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Release Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Summary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-4.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 4.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-4.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 4.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Version 3.7
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Version 3.7
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v378-2024-05-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.8 (2024-05-06)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.8 (2024-05-06)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v377-2024-05-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.7 (2024-05-01)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.7 (2024-05-01)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v376-2024-04-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.6 (2024-04-22)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.6 (2024-04-22)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v375-2024-04-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.5 (2024-04-04)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.5 (2024-04-04)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v374-2024-03-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.4 (2024-03-13)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.4 (2024-03-13)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v373-2024-02-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.3 (2024-02-21)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.3 (2024-02-21)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v372-2024-02-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.2 (2024-02-05)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.2 (2024-02-05)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v371-2024-01-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.1 (2024-01-17)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.1 (2024-01-17)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v370-2023-12-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.0 (2023-12-29)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.0 (2023-12-29)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="New Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vpn-tunnels-9816" class="md-nav__link">
+    <span class="md-ellipsis">
+      VPN Tunnels (#9816)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-rules-14132" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Rules (#14132)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machine-disks-8356" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual Machine Disks (#8356)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-protection-rules-10244" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object Protection Rules (#10244)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improved-custom-field-visibility-controls-13299" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improved Custom Field Visibility Controls (#13299)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improved-global-search-results-14134" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improved Global Search Results (#14134)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-column-registration-for-plugins-14173" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table Column Registration for Plugins (#14173)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-backend-registration-for-plugins-13381" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Backend Registration for Plugins (#13381)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhancements_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rest-api-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      REST API Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-3.6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 3.6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-3.5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 3.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-3.4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 3.4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-3.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 3.3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-3.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 3.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-3.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 3.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-3.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 3.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-2.11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 2.11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-2.10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 2.10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-2.9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 2.9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-2.8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 2.8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-2.7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 2.7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-2.6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 2.6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-2.5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 2.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-2.4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 2.4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-2.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 2.3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-2.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 2.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-2.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 2.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version-2.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version 2.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v378-2024-05-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.8 (2024-05-06)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.8 (2024-05-06)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v377-2024-05-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.7 (2024-05-01)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.7 (2024-05-01)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v376-2024-04-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.6 (2024-04-22)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.6 (2024-04-22)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v375-2024-04-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.5 (2024-04-04)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.5 (2024-04-04)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v374-2024-03-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.4 (2024-03-13)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.4 (2024-03-13)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v373-2024-02-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.3 (2024-02-21)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.3 (2024-02-21)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v372-2024-02-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.2 (2024-02-05)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.2 (2024-02-05)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v371-2024-01-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.1 (2024-01-17)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.1 (2024-01-17)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v370-2023-12-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.7.0 (2023-12-29)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.7.0 (2023-12-29)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="New Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vpn-tunnels-9816" class="md-nav__link">
+    <span class="md-ellipsis">
+      VPN Tunnels (#9816)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-rules-14132" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Rules (#14132)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machine-disks-8356" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual Machine Disks (#8356)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-protection-rules-10244" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object Protection Rules (#10244)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improved-custom-field-visibility-controls-13299" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improved Custom Field Visibility Controls (#13299)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improved-global-search-results-14134" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improved Global Search Results (#14134)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-column-registration-for-plugins-14173" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table Column Registration for Plugins (#14173)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-backend-registration-for-plugins-13381" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Backend Registration for Plugins (#13381)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhancements_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rest-api-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      REST API Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="netbox-v37">NetBox v3.7</h1>
+<h2 id="v378-2024-05-06">v3.7.8 (2024-05-06)</h2>
+<h3 id="enhancements">Enhancements</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/12127">#12127</a> - Enable adding new cables directly from navigation menu</li>
+</ul>
+<h3 id="bug-fixes">Bug Fixes</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/15877">#15877</a> - Account for virtual chassis membership when assigning related interfaces via bulk edit</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15917">#15917</a> - Fix pagination through search results within dropdown fields</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15925">#15925</a> - Fix SVG rendering of cable traces to circuit terminations</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15948">#15948</a> - Fix cable trace SVG generation for cables with multiple terminations at both ends</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15960">#15960</a> - Replace CSV export formatting for several many-to-many fields</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15961">#15961</a> - Fix secret toggle button for IKE policies</li>
+</ul>
+<hr />
+<h2 id="v377-2024-05-01">v3.7.7 (2024-05-01)</h2>
+<h3 id="enhancements_1">Enhancements</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/15428">#15428</a> - Show usage counts for associated objects on config template list</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15812">#15812</a> - Add Date &amp; DateTime variable types for custom scripts</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15894">#15894</a> - Cache the generated API schema definition for shorter loading times</li>
+</ul>
+<h3 id="bug-fixes_1">Bug Fixes</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/11460">#11460</a> - Fix AttributeError exception when editing a cable with only one end terminated</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/13712">#13712</a> - Fix row highlighting for device interface list display</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/13806">#13806</a> - Fix "mark" button tooltip on button activation for device interface list display</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/13922">#13922</a> - Fix SVG drawing error on multiple termination trace with multiple devices</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14241">#14241</a> - Fix random interface swap when performing cable trace with multiple termination</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14852">#14852</a> - Fix NoReverseMatch exception when viewing an event rule which references a deleted custom script</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15524">#15524</a> - Fix rounding error when reporting IP range utilization</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15548">#15548</a> - Ignore many-to-many mappings when checking dependencies of an object being deleted</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15845">#15845</a> - Avoid extraneous database queries when fetching assigned IP addresses via REST API</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15872">#15872</a> - <code>BANNER_MAINTENANCE</code> content should permit custom HTML</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15891">#15891</a> - Ensure deterministic ordering for scripts &amp; reports</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15896">#15896</a> - Fix retention of default value when editing a custom JSON field</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15899">#15899</a> - Fix exception when enabling the tags column on the L2VPN terminations table</li>
+</ul>
+<hr />
+<h2 id="v376-2024-04-22">v3.7.6 (2024-04-22)</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If remote authentication is in use with Gunicorn v22.0 or later, it may be necessary to configure Gunicorn's <a href="https://docs.gunicorn.org/en/stable/settings.html#header-map"><code>header_map</code></a> setting to preserve authentication headers.</p>
+</div>
+<h3 id="enhancements_2">Enhancements</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/14690">#14690</a> - Improve rendering of JSON data in configuration form</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15427">#15427</a> - Enable compatibility with non-Amazon S3 providers for remote data sources</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15640">#15640</a> - Add global search support for L2VPN identifiers</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15644">#15644</a> - Introduce new configuration parameters for enabling HTTP Strict Transport Security (HSTS)</li>
+</ul>
+<h3 id="bug-fixes_2">Bug Fixes</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/15541">#15541</a> - Restore ability to modify assigned component template when adding/modifying an inventory item template</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15582">#15582</a> - Fix permission constraints for synchronization of remote data sources</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15588">#15588</a> - Correct OpenAPI schema definitions for read-only fields which may return null values</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15635">#15635</a> - Extend plugin removal instruction to include reindexing the global search cache</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15654">#15654</a> - Fix <code>AttributeError</code> exception when attempting to save an incomplete tunnel termination</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15668">#15668</a> - Fix permission required to display virtual disks tab on virtual machine UI view</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15685">#15685</a> - Allow filtering cables by decimal values using UI filter form</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15761">#15761</a> - Add missing <code>ike_policy</code> &amp; <code>ike_policy_id</code> filters for IKE proposals</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15771">#15771</a> - Include <code>id</code> in list of supported fields for all bulk import forms</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15790">#15790</a> - Fix live preview support for EventRule comments</li>
+</ul>
+<hr />
+<h2 id="v375-2024-04-04">v3.7.5 (2024-04-04)</h2>
+<h3 id="enhancements_3">Enhancements</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/14707">#14707</a> - Clarify interface designation when creating tunnel terminations</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15039">#15039</a> - Allow API tokens to be cloned</li>
+</ul>
+<h3 id="bug-fixes_3">Bug Fixes</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/14799">#14799</a> - Avoid caching modified reports &amp; scripts</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15029">#15029</a> - Raise a clean validation error when attempting to make duplicate FHRP group assignments</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15102">#15102</a> - Fix usage of selector widget for form fields referencing users/groups</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15435">#15435</a> - Correct permissions name to allow adding a module bay to a device via the UI</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15502">#15502</a> - Fix KeyError exception when modifying an IP address assigned to a virtual machine</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15597">#15597</a> - Restore help modal for <code>button_class</code> field on custom link bulk import form</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15598">#15598</a> - Fix exception when creating a device from a device type with one or more child inventory items</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15608">#15608</a> - Avoid caching values of null fields in search index</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15609">#15609</a> - Fix filtering of the providers list by assigned ASN</li>
+</ul>
+<hr />
+<h2 id="v374-2024-03-13">v3.7.4 (2024-03-13)</h2>
+<h3 id="enhancements_4">Enhancements</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/14206">#14206</a> - Add additional FibreChannel SFP+ interface types</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14366">#14366</a> - Enable custom links for config contexts &amp; templates</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15291">#15291</a> - Add tunnel termination buttons to VM interfaces table</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15297">#15297</a> - Linkify platform column in device &amp; virtual machine tables</li>
+</ul>
+<h3 id="bug-fixes_4">Bug Fixes</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/13722">#13722</a> - Fix range expansion for comma-separated numerical values</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14832">#14832</a> - Enable querying IP addresses for an FHRP group via GraphQL</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15220">#15220</a> - Fix validation check when bulk editing the mask length of IP addresses</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15232">#15232</a> - Permit user with sufficient permissions to assign an inventory item to a device type</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15241">#15241</a> - Restore missing <code>display</code> field on VirtualDisk serialization in REST API</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15243">#15243</a> - Correct representation of installed module when listing module bays using REST API brief mode</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15316">#15316</a> - Fix selection of 3DES encryption for IKE &amp; IPSec proposals</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15322">#15322</a> - Add description field to YAML export for device &amp; module types</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15336">#15336</a> - Correct label for recurring scheduled jobs</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15347">#15347</a> - Fix querying virtual machine contacts via GraphQL</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15356">#15356</a> - Fix assignment of front &amp; rear images to device types via REST API</li>
+</ul>
+<hr />
+<h2 id="v373-2024-02-21">v3.7.3 (2024-02-21)</h2>
+<h3 id="enhancements_5">Enhancements</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/14587">#14587</a> - Display a human-friendly name for the OpenID Connect remote auth backend</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14946">#14946</a> - Remove <code>associate_by_email()</code> from default social auth pipeline</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14966">#14966</a> - Add PostgreSQL index for object type &amp; ID on CachedValue table to improve performance</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15177">#15177</a> - Add "last login" time to user display &amp; REST API serializer</li>
+</ul>
+<h3 id="bug-fixes_5">Bug Fixes</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/14058">#14058</a> - Limit platform options by manufacturer when editing a device or device type</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14064">#14064</a> - Resolving parent location should consider assigned site when bulk importing locations</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14079">#14079</a> - Ensure changes are logged on related objects when deleting an object referenced via a many-to-many relationship (e.g. tags)</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14405">#14405</a> - Clean up formatting of link peers in bulk CSV export of cable termination objects</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14689">#14689</a> - Preserve "empty" default values for JSON custom fields</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14952">#14952</a> - Update existing AutoSyncRecord when changing the data file of an auto-synced object</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15059">#15059</a> - Correct IP address count link in VM interfaces table</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15067">#15067</a> - Fix uncaught exception when attempting invalid device bay import</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15070">#15070</a> - Fix inclusion of <code>config_template</code> field on REST API serializer for virtual machines</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15084">#15084</a> - Fix "add export template" link under "export" button on object list views</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15090">#15090</a> - Ensure protection rules are evaluated prior to enqueueing events when deleting an object</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15091">#15091</a> - Fix designation of the active tab for assigned object when modifying an L2VPN termination</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15101">#15101</a> - Correct OpenAPI schema for rack elevation REST API endpoint</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15115">#15115</a> - Fix unhandled exception with invalid permission constraints</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15126">#15126</a> - <code>group</code> field should be optional when creating VPN tunnel via REST API</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15127">#15127</a> - Add missing group column to VPN tunnels table</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15133">#15133</a> - Fix FHRP group representation on assignments REST API endpoint using brief mode</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15174">#15174</a> - Warn that permission constraints are not supported for reports or scripts</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15184">#15184</a> - Correct REST API schema definition for <code>front_image</code> &amp; <code>rear_image</code> on DeviceType</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15185">#15185</a> - Ensure error messages pertaining to related objects are displayed on the bulk import form</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15192">#15192</a> - Fix exception when viewing current config when no history is present</li>
+</ul>
+<hr />
+<h2 id="v372-2024-02-05">v3.7.2 (2024-02-05)</h2>
+<h3 id="enhancements_6">Enhancements</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/13729">#13729</a> - Omit sensitive data source parameters from change log data</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14645">#14645</a> - Limit the number of assigned IP addresses displayed under interfaces list</li>
+</ul>
+<h3 id="bug-fixes_6">Bug Fixes</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/14500">#14500</a> - Optimize calculation of available child prefixes &amp; ranges when viewing a prefix</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14511">#14511</a> - Fix GraphQL support for interfaces connected to provider networks</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14572">#14572</a> - Correct the number of jobs listed for individual report &amp; script modules</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14703">#14703</a> - Revert to the default layout when encountering a misconfigured dashboard</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14755">#14755</a> - Fix validation of choice values &amp; labels when creating a custom field choice set via the REST API</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14838">#14838</a> - Avoid corrupting JSON data when changing the action type while editing an event rule</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14839">#14839</a> - Fix form validation error when attempting to terminate a tunnel to a virtual machine interface</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14840">#14840</a> - Fix <code>NoReverseMatch</code> exception when rendering a custom field which references a user</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14847">#14847</a> - IKE policy mode may be set inly when IKEv1 is selected</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14851">#14851</a> - Automatically remove any associated bookmarks when deleting a user</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14879">#14879</a> - Include custom fields in REST API representation of data sources</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14885">#14885</a> - Add missing "group" field to VPN tunnel creation form</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14892">#14892</a> - Fix exception when running report/script via command line due to missing username</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14920">#14920</a> - Include button to display available status choices when bulk importing virtual device contexts</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14945">#14945</a> - Fix "select all" button for device type components</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14947">#14947</a> - Ensure that application &amp; removal of tags is always recorded in an object's change log</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14962">#14962</a> - Fix config context rendering for VMs assigned directly to a site (rather than via a cluster)</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14999">#14999</a> - Fix "create &amp; add another" link for interface FHRP group assignment</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15015">#15015</a> - Pre-populate assigned tenant when allocating next available IP address under prefix view</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15020">#15020</a> - Automatically update all VMs when changing a cluster's assigned site</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/15025">#15025</a> - The <code>can_add()</code> template filter should accept a model (not an instance)</li>
+</ul>
+<hr />
+<h2 id="v371-2024-01-17">v3.7.1 (2024-01-17)</h2>
+<h3 id="bug-fixes_7">Bug Fixes</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/13844">#13844</a> - Use <code>available_at_site</code> filter when filtering VLANs under prefix form</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14663">#14663</a> - Fix tunnel creation when setting initial termination to a VM interface</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14706">#14706</a> - Relax one-to-one mapping of tunnel termination to IP address</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14709">#14709</a> - Fix typo in tunnel termination type choice name</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14749">#14749</a> - Remove errant translation wrapper from <code>installed_device</code> on DeviceBay</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14778">#14778</a> - Custom field API serializer should accept null values for all optional fields</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14791">#14791</a> - Hide available prefixes when searching within a parent prefix</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14793">#14793</a> - Add missing Diffie-Hellman group 15</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14816">#14816</a> - Ensure default contact assignment ordering is consistent</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14817">#14817</a> - Relax required fields for IKE &amp; IPSec models on bulk import</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14827">#14827</a> - Ensure all matching event rules are processed in response to an event</li>
+</ul>
+<hr />
+<h2 id="v370-2023-12-29">v3.7.0 (2023-12-29)</h2>
+<h3 id="breaking-changes">Breaking Changes</h3>
+<ul>
+<li>The following fields have been removed from the Webhook model: <code>content_types</code>, <code>type_create</code>, <code>type_update</code>, <code>type_delete</code>, <code>type_job_start</code>, <code>type_job_end</code>, <code>enabled</code>, and <code>conditions</code>. Webhooks are now tied to events via <a href="../../features/event-rules/">event rules</a>. New event rules will be created for any existing webhooks automatically upon upgrade.</li>
+<li>The <code>ui_visibility</code> field on the <a href="../../models/extras/customfield/">custom field model</a> has been replaced with two new fields: <code>ui_visible</code> and <code>ui_editable</code>. These new fields will have their values mapped from the original field automatically upon upgrade.</li>
+<li>The <code>FeatureQuery</code> class used internally for querying content types by model feature has been removed. It has been replaced by the new <code>with_feature()</code> manager method on NetBox's proxy model for ContentType (<code>core.models.ContentType</code>).</li>
+<li>The internal ConfigRevision model has moved from <code>extras</code> to <code>core</code>. Configuration history will be retained throughout the upgrade process.</li>
+<li>The <a href="../../models/vpn/l2vpn/">L2VPN</a> and <a href="../../models/vpn/l2vpntermination/">L2VPNTermination</a> models have moved from the <code>ipam</code> app to the new <code>vpn</code> app. All object data will be retained, however please note that the relevant API endpoints have likewise moved to <code>/api/vpn/</code>.</li>
+<li>The <code>CustomFieldsMixin</code>, <code>SavedFiltersMixin</code>, and <code>TagsMixin</code> classes have moved from the <code>extras.forms.mixins</code> module to <code>netbox.forms.mixins</code>.</li>
+<li>The <code>netbox.models.features.WebhooksMixin</code> class has been renamed to <code>EventRulesMixin</code>.</li>
+</ul>
+<h3 id="new-features">New Features</h3>
+<h4 id="vpn-tunnels-9816">VPN Tunnels (<a href="https://github.com/netbox-community/netbox/issues/9816">#9816</a>)</h4>
+<p>Several new models have been introduced to enable <a href="../../features/vpn-tunnels/">VPN tunnel management</a>. Users can now define tunnels with two or more terminations to represent peer-to-peer or hub-and-spoke topologies. Each termination is made to a virtual interface on a device or virtual machine. Additionally, users can define IKE and IPSec proposals and policies, which can be applied to tunnels to document encryption and authentication strategies.</p>
+<h4 id="event-rules-14132">Event Rules (<a href="https://github.com/netbox-community/netbox/issues/14132">#14132</a>)</h4>
+<p>This release introduces <a href="../../features/event-rules/">event rules</a>, which can be used to send webhooks or execute custom scripts automatically in response to events that occur in NetBox. For example, it's now possible to run a custom script whenever a new site is created with a particular status or tag.</p>
+<p>Event rules replace and extend functionality that was previously built into the webhook model. New event rules will be created for any existing webhooks automatically upon upgrade.</p>
+<h4 id="virtual-machine-disks-8356">Virtual Machine Disks (<a href="https://github.com/netbox-community/netbox/issues/8356">#8356</a>)</h4>
+<p>A new <a href="../../models/virtualization/virtualdisk/">VirtualDisk</a> model has been introduced to enable tracking the assignment of discrete virtual disks to virtual machines. The <code>size</code> field has been retained on the VirtualMachine model, and will be populated automatically with the aggregate size of all assigned virtual disks. (Users who opt to eschew the new model may continue using the VirtualMachine <code>size</code> attribute independently as in previous releases.)</p>
+<h4 id="object-protection-rules-10244">Object Protection Rules (<a href="https://github.com/netbox-community/netbox/issues/10244">#10244</a>)</h4>
+<p>A new <a href="../../configuration/data-validation/#protection_rules"><code>PROTECTION_RULES</code></a> configuration parameter has been introduced. Similar to how <a href="../../customization/custom-validation/">custom validation rules</a> can be used to enforce certain values for object attributes, protection rules guard against the deletion of objects which do not meet specified criteria. This enables an administrator to prevent, for example, the deletion of a site which has a status of "active."</p>
+<h4 id="improved-custom-field-visibility-controls-13299">Improved Custom Field Visibility Controls (<a href="https://github.com/netbox-community/netbox/issues/13299">#13299</a>)</h4>
+<p>The <code>ui_visible</code> field on <a href="../../models/extras/customfield/">the custom field model</a> has been superseded by two new fields, <code>ui_visible</code> and <code>ui_editable</code>, which control how and whether a custom field is displayed when view and editing an object, respectively. Separating these two functions into discrete fields allows more control over how each custom field is presented to users. The values of these fields will be appropriately set automatically during the upgrade process from the value of the original field.</p>
+<h4 id="improved-global-search-results-14134">Improved Global Search Results (<a href="https://github.com/netbox-community/netbox/issues/14134">#14134</a>)</h4>
+<p>Global search results now include additional context about each object, such as a description, status, and/or related objects. The set of attributes to be displayed is specific to each object type, and is defined by setting <code>display_attrs</code> under the object's <a href="../../plugins/development/search/#netbox.search.SearchIndex">SearchIndex class</a>.</p>
+<h4 id="table-column-registration-for-plugins-14173">Table Column Registration for Plugins (<a href="https://github.com/netbox-community/netbox/issues/14173">#14173</a>)</h4>
+<p>Plugins can now <a href="../../plugins/development/tables/#extending-core-tables">register their own custom columns</a> for inclusion on core NetBox tables. For example, a plugin can register a new column on SiteTable using the new <code>register_table_column()</code> utility function, and it will become available for users to select for display.</p>
+<h4 id="data-backend-registration-for-plugins-13381">Data Backend Registration for Plugins (<a href="https://github.com/netbox-community/netbox/issues/13381">#13381</a>)</h4>
+<p>Plugins can now <a href="../../plugins/development/data-backends/">register their own data backends</a> for use with <a href="../../features/synchronized-data/">synchronized data sources</a>. This enables plugins to introduce new backends in addition to the git, S3, and local path backends provided natively.</p>
+<h3 id="enhancements_7">Enhancements</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/12135">#12135</a> - Avoid orphaned interfaces by preventing the deletion of interfaces which have children assigned</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/12216">#12216</a> - Add a <code>color</code> field for circuit types</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/13230">#13230</a> - Allow device types to be excluded from consideration when calculating a rack's utilization</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/13334">#13334</a> - Add an <code>error</code> field to the Job model to record any errors associated with its execution</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/13427">#13427</a> - Introduce a mechanism for excluding models from general-purpose lists of object types</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/13690">#13690</a> - Display any dependent objects to be deleted prior to deleting an object via the web UI</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/13794">#13794</a> - Any models with a relationship to Tenant are now included automatically in the list of related objects under the tenant view</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/13808">#13808</a> - Add a <code>/render-config</code> REST API endpoint for virtual machines</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14035">#14035</a> - Order objects of equivalent weight by value in global search results to improve readability</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14147">#14147</a> - Avoid recording empty changelog entries via the new <code>CHANGELOG_SKIP_EMPTY_CHANGES</code> config parameter</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14156">#14156</a> - Enable custom fields for contact assignments</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14240">#14240</a> - Increase maximum values for custom field minimum &amp; maximum numeric validators</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14361">#14361</a> - Add a <code>description</code> field for webhooks</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14365">#14365</a> - Introduce <code>job_start</code> and <code>job_end</code> signals to allow automated plugin actions</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14434">#14434</a> - Add model-specific termination object filters for cables (e.g. <code>interface_id</code> and <code>consoleport_id</code>)</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14436">#14436</a> - Add PostgreSQL indexes for all GenericForeignKey fields</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14579">#14579</a> - Allow users to specify a preferred language for UI translations</li>
+</ul>
+<h3 id="translations">Translations</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/14075">#14075</a> - Add Spanish translation</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14096">#14096</a> - Add French translation</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14145">#14145</a> - Add Portuguese translation</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14266">#14266</a> - Add Russian translation</li>
+</ul>
+<h3 id="bug-fixes_8">Bug Fixes</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/14432">#14432</a> - Fix hyperlinks for global search result attributes</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14472">#14472</a> - Fix display of hidden custom fields in object edit forms</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14499">#14499</a> - Relax requirements for encryption/auth algorithms on IKE &amp; IPSec proposals</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14550">#14550</a> - Fix changing action type of existing event rule</li>
+</ul>
+<h3 id="other-changes">Other Changes</h3>
+<ul>
+<li><a href="https://github.com/netbox-community/netbox/issues/13550">#13550</a> - Optimize the format for declaring view actions under <code>ActionsMixin</code> (backward compatibility has been retained)</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/13645">#13645</a> - Installation of the <code>sentry-sdk</code> Python library is now required only if Sentry reporting is enabled</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14036">#14036</a> - Move plugin resources from the <code>extras</code> app into <code>netbox</code> (backward compatibility has been retained)</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14153">#14153</a> - Replace <code>FeatureQuery</code> with new <code>with_feature()</code> method on proxy ContentType manager</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14311">#14311</a> - Move the L2VPN models from the <code>ipam</code> app to the new <code>vpn</code> app</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14312">#14312</a> - Move the ConfigRevision model from the <code>extras</code> app to <code>core</code></li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14326">#14326</a> - Form feature mixin classes have been moved from the <code>extras</code> app to <code>netbox</code></li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14395">#14395</a> - Move <code>extras.webhooks_worker.process_webhook()</code> to <code>extras.webhooks.send_webhook()</code> (backward compatibility has been retained)</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14424">#14424</a> - Remove change logging functionality from StagedChange</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14458">#14458</a> - Remove the obsolete <code>clearcache</code> management command</li>
+<li><a href="https://github.com/netbox-community/netbox/issues/14536">#14536</a> - Enforce uniqueness by default for non-VRF prefixes &amp; IP addresses (<code>ENFORCE_GLOBAL_UNIQUE</code> now defaults to true)</li>
+</ul>
+<h3 id="rest-api-changes">REST API Changes</h3>
+<ul>
+<li>Introduced the following endpoints:<ul>
+<li><code>/api/extras/event-rules/</code></li>
+<li><code>/api/virtualization/virtual-disks/</code></li>
+<li><code>/api/vpn/ike-policies/</code></li>
+<li><code>/api/vpn/ike-proposals/</code></li>
+<li><code>/api/vpn/ipsec-policies/</code></li>
+<li><code>/api/vpn/ipsec-profiles/</code></li>
+<li><code>/api/vpn/ipsec-proposals/</code></li>
+<li><code>/api/vpn/tunnels/</code></li>
+<li><code>/api/vpn/tunnel-terminations/</code></li>
+</ul>
+</li>
+<li>The following endpoints have been moved:<ul>
+<li><code>/api/ipam/l2vpns/</code> -&gt; <code>/api/vpn/l2vpns/</code></li>
+<li><code>/api/ipam/l2vpn-terminations/</code> -&gt; <code>/api/vpn/l2vpn-terminations/</code></li>
+</ul>
+</li>
+<li>circuits.CircuitType<ul>
+<li>Added the optional <code>color</code> choice field</li>
+</ul>
+</li>
+<li>core.Job<ul>
+<li>Added the read-only <code>error</code> character field</li>
+</ul>
+</li>
+<li>extras.Webhook<ul>
+<li>Removed the following fields (these have been moved to the new <code>EventRule</code> model):<ul>
+<li><code>content_types</code></li>
+<li><code>type_create</code></li>
+<li><code>type_update</code></li>
+<li><code>type_delete</code></li>
+<li><code>type_job_start</code></li>
+<li><code>type_job_end</code></li>
+<li><code>enabled</code></li>
+<li><code>conditions</code></li>
+</ul>
+</li>
+<li>Add the optional <code>description</code> field</li>
+</ul>
+</li>
+<li>dcim.DeviceType<ul>
+<li>Added the <code>exclude_from_utilization</code> boolean field</li>
+</ul>
+</li>
+<li>extras.CustomField<ul>
+<li>Removed the <code>ui_visibility</code> field</li>
+<li>Added the <code>ui_visible</code> and <code>ui_editable</code> choice fields</li>
+</ul>
+</li>
+<li>tenancy.ContactAssignment<ul>
+<li>Added support for custom fields</li>
+</ul>
+</li>
+<li>virtualization.VirtualDisk<ul>
+<li>Added the read-only <code>virtual_disk_count</code> integer field</li>
+</ul>
+</li>
+<li>virtualization.VirtualMachine<ul>
+<li>Added the <code>/render-config</code> endpoint</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../version-4.0/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Version 4.0">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Version 4.0
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../version-3.6/" class="md-footer__link md-footer__link--next" aria-label="Next: Version 3.6">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Version 3.6
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+
+  <div class="md-copyright">
+    ℹ️ Documentation is being served locally
+  </div>
+
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/netbox-community/netbox" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://netdev.chat/" target="_blank" rel="noopener" title="netdev.chat" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1s21.16-47.06 47.06-47.06h47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06S448 171 448 196.9s-21.16 47.06-47.06 47.06h-47.06zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06S309 480 283.1 480s-47.06-21.16-47.06-47.06v-47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06s21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
