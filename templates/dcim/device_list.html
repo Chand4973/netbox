@@ -141,4 +141,33 @@ block extra_head %} {{ block.super }}
   </button>
 </div>
 {% endif %} {% if 'bulk_delete' in actions %} {% bulk_delete_button model
-query_params=request.GET %} {% endif %} {% endblock %}
+query_params=request.GET %} {% endif %} {% endblock %} {% block
+content_before_table %} {{ block.super }}
+
+<!-- Ping Status Legend -->
+<div class="ping-status-legend">
+  <div class="legend-title">{% trans "Ping Status Legend" %}</div>
+  <div class="legend-items">
+    <div class="legend-item">
+      <i class="mdi mdi-check-circle text-success"></i>
+      <span>{% trans "Online" %}</span>
+    </div>
+    <div class="legend-item">
+      <i class="mdi mdi-close-circle text-danger"></i>
+      <span>{% trans "Offline" %}</span>
+    </div>
+    <div class="legend-item">
+      <i class="mdi mdi-loading mdi-spin text-muted"></i>
+      <span>{% trans "Loading..." %}</span>
+    </div>
+    <div class="legend-item">
+      <i class="mdi mdi-alert-circle text-warning"></i>
+      <span>{% trans "Error" %}</span>
+    </div>
+  </div>
+  <small class="text-muted mt-2 d-block">
+    {% trans "Ping status is automatically updated every 30 seconds. Click the
+    refresh button to update immediately." %}
+  </small>
+</div>
+{% endblock %}
